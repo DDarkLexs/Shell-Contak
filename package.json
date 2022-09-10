@@ -1,0 +1,66 @@
+{
+  "name": "Shell-contak",
+  "productName": "Shell Contak",
+  "version": "3.0.0",
+  "description": "sistema de controle de moeda em kwanza",
+  "license": "ISC",
+  "private": true,
+  "author": "DDarkCoder  <antoniolexis2001@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --dir",
+    "dist": "electron-builder",
+    "linux": "electron-builder --linux",
+    "rebuild": "electron-rebuild -f -w sqlite3",
+    "win": "electron-builder --ia32 --x64 -w",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "devDependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.5",
+    "electron": "^14.0.1",
+    "electron-builder": "^22.11.7",
+    "electron-rebuild": "^3.2.3",
+    "fs-extra": "^10.0.0"
+  },
+  "dependencies": {
+    "ascii-color-log": "^0.1.3",
+    "axios": "^0.27.2",
+    "countup.js": "^2.3.2",
+    "electron-is-dev": "^2.0.0",
+    "electron-prompt": "^1.7.0",
+    "extenso": "^2.0.1",
+    "knex": "^0.95.11",
+    "md5": "^2.3.0",
+    "moment": "^2.29.4",
+    "sqlite3": "^5.0.2",
+    "xml-js": "^1.6.11"
+  },
+  "build": {
+    "productName": "Shell Contak",
+    "directories": {
+      "output": "dist"
+    },
+    "appId": "com.DDarkcoder.ShellContak",
+    "linux": {
+      "target": [
+        "deb",
+        "snap",
+        "rpm"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "displayLanguageSelector": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "menuCategory": true
+    },
+    "win": {
+      "sign": "./build/customSign.js"
+    },
+    "asarUnpack": [
+      "src/database/database.db"
+    ]
+  }
+}

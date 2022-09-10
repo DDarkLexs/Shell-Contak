@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/libs/vuetify-v2.6.6/vuetify-v2.6.6.min.css">
+  <link rel="stylesheet" href="assets/libs/@mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/libs/vuesax/dist/vuesax.min.css">
+  <link rel="stylesheet" href="assets/css/loader.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/transition.css">
+</head>
+
+<body>
+
+
+  <div id="loading-bg">
+    <div class="loading-logo">
+      <img src="assets/media/logo/logo.png" alt="Logo" />
+    </div>
+
+    <div class="loading">
+      <div class="effect-1 effects"></div>
+      <div class="effect-2 effects"></div>
+      <div class="effect-3 effects"></div>
+    </div>
+  </div>
+
+  <div id="app">
+  </div>
+</body>
+<script src="assets/libs/vue.min.js"></script>
+<script src="assets/libs/vuesax/dist/vuesax.min.js"></script>
+<script src="assets/libs/vuex/dist/vuex.min.js"></script>
+<script src="assets/libs/vue-router/dist/vue-router.min.js"></script>
+<script src="assets/libs/vuetify-v2.6.6/vuetify-v2.6.6.min.js"></script>
+<script src="assets/js/plugins/typedjs/typedjs.js"></script>
+<script>
+  require('../../renderer/app/main.js')
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+        "label":"Perfil",
+        "name":"perfil usuario",
+        "icon":"mdi-account-circle",
+        "disabled":false
+    },
+
+    {
+        "label":"Menssagem",
+        "name":"perfil usuario",
+        "icon":"mdi-email",
+        "disabled":true
+    },
+
+    {
+        "label":"Notificação",
+        "name":"perfil usuario",
+        "icon":"mdi-bell",
+        "disabled":true
+    },
+
+    {
+        "label":"Configuração",
+        "name":"editar-usuario",
+        "icon":"mdi-cog",
+        "disabled":false
+    }
+
+
+
+]
