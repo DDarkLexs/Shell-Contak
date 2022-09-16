@@ -4,6 +4,7 @@ const productName = ipc.sendSync("getAppName")
 const usuario = require('./modules/usuario')
 const funcionario = require('./modules/funcionario')
 const listaUsuario = require('./modules/listaUsuario')
+const moeda = require('./modules/moeda')
 const security = require('./security')
 
 
@@ -29,6 +30,7 @@ module.exports = new Vuex.Store({
         usuario,
         funcionario,
         listaUsuario,
+        moeda
  
     }
 
