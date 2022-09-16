@@ -128,7 +128,7 @@ module.exports = `
   </v-toolbar>
 
 </v-app-bar>
-<v-navigation-drawer :src="$root.dirname + '/assets/media/banner/banner-3.jpg'"  dark v-model="drawer" relative app>
+<v-navigation-drawer :src="$root.dirname + '/assets/media/banner/banner-1.jpg'"  dark v-model="drawer" relative app>
 
 <v-list-item two-line>
 <v-list-item-avatar>
@@ -152,9 +152,9 @@ module.exports = `
 
 <v-divider></v-divider>
  -->
-<v-list rounded dense nav v-if="!isUserLoggedIn()">
+<v-list  dense nav v-if="!isUserLoggedIn()">
   <v-list-item v-for="({ to, label, icon,adminOnly}, i) in navigation" :key="i"
-  color="primary lighten-1"  no-action v-show="navRole(adminOnly)" :to="to">
+  no-action v-show="navRole(adminOnly)" :to="to">
     <v-list-item-icon>
       <v-icon>{{ icon }}</v-icon>
     </v-list-item-icon>
