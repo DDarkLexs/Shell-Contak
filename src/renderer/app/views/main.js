@@ -167,7 +167,7 @@ module.exports = `
 
  
 <!-- Sizes your content based upon application components -->
-<v-img :src="$root.dirname + '/assets/media/img/img100.jpg'">
+<v-img :src="$root.dirname + '/assets/media/banner/Designs-09.jpg'">
   <v-main>
 
     <v-container fluid>    

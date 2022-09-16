@@ -2,7 +2,6 @@ const electron = require("electron");
 const ipc = electron.ipcRenderer;
 const { getUserData,isUserLoggedIn,setData } = require('../../auth/utils')
 const { coins } = new (require('../../assets/data/forms'))
-
 module.exports = ({
   namespaced: true,
   state: {
@@ -67,6 +66,23 @@ module.exports = ({
 
   },
 actions: {
+  saveToDatabase({ commit,state }){
+      return new Promise(async (resolve,reject) =>{
+
+        try {
+          const query = ipc.sendSync('post-contagem', state.coins)
+          if(!query.response) throw query.msg
+          resolve(query)
+
+        } catch (error) {
+
+          reject(error)
+          
+      }
+      
+    })
+  },
+
   cleanForms({ commit }){
       try {
         
@@ -78,6 +94,7 @@ actions: {
       }
 
   }
+  
 
 },
 })

@@ -13,13 +13,13 @@ const  vuetify = ({
         dark: JSON.parse(localStorage.getItem('darkMode')) || false,
         themes: {
             light: {
-                primary:'#0733eb',
-                secondary:'#00a3ff',
+                primary:'#157a1a',
+                secondary:'#6e33ff',
                 danger:'#cc3e44'
             },
             dark: {
-                primary: '#0733eb',
-                secondary:'#00a3ff',
+                primary: '#157a1a',
+                secondary:'#6e33ff',
                 danger:'#cc3e44'
             },
         },

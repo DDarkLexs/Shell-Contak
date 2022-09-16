@@ -1,6 +1,6 @@
 const { getUserData,isUserLoggedIn } = require('../auth/utils')
 let router
-const initPath = 'contagem'
+const initPath = 'registro'
 
  
 const routes = [
@@ -32,6 +32,12 @@ const routes = [
     name:'contagem',
     path: `/contagem`,
     component: require('../views/pages/contagem'),
+    meta: { requiresAuth: true, adminOnly:false }
+    },
+    {  
+    name:'registro',
+    path: `/registro`,
+    component: require('../views/pages/registro'),
     meta: { requiresAuth: true, adminOnly:false }
     },
 

@@ -16,7 +16,7 @@ module.exports = {
   <div>
   <v-row g-1>
     <v-col cols="12" sm="4">
-        <v-card outlined rounded class="p-2" height="445">
+        <v-card outlined rounded class="p-2" height="auto">
           <v-card-text>
           
         <v-text-field type="text"  
@@ -52,7 +52,7 @@ module.exports = {
                apagar
             </v-btn>
             <v-btn dark
-           
+           @click="guardar"
              color="success">
                <v-icon right>mdi-content-save</v-icon>
                salvar
@@ -63,7 +63,7 @@ module.exports = {
     </v-col>
 
     <v-col cols="12" sm="8">
-        <v-card outlined rounded height="400">
+        <v-card outlined rounded height="auto">
         <v-card-text>
             
         
@@ -101,13 +101,38 @@ module.exports = {
       },
       
       methods: {
+        async guardar(){
+          try {
+
+            (await this.save())
+
+            this.$vs.notification({
+              border:this.$vuetify.theme.themes.light.primary,
+              position:'right',
+              title: 'Registrado!',
+              text: `A contagem foi salvo com sucesso, verifique na tabela de registro!`
+          })
+
+        } catch (error) {
+          this.$vs.notification({
+            border:this.$vuetify.theme.themes.light.danger,
+            position:'right',
+            title: 'houve um erro!',
+            text: `${error}`
+        })
+          
+        }
+
+    
+
+        },
         ...mapActions({
           clear:'moeda/cleanForms',
+          save:'moeda/saveToDatabase',
 
         }),
         moeda,
         extensoEmKwanza(value){
-
           return ipcRenderer.sendSync('get-localMoedaByExtenso',value)
         },
 
@@ -152,7 +177,7 @@ module.exports = {
       },
       mounted() {
    
-      
+ 
 
 
       },

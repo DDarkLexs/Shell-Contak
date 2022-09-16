@@ -19,7 +19,7 @@ module.exports = [
    {
       icon:'mdi-file-chart',
       label:'Registros',
-      to:{ name: 'usuário' },
+      to:{ name: 'registro' },
       adminOnly:true,
    },
    {
